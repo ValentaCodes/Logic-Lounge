@@ -25,7 +25,7 @@ const server = http.createServer(app);
 const io = connectSocketServer(server,apolloServer);
 
 const mongoose = require('mongoose');
-mongoose.set('strictQuery', true);
+mongoose.set('strictQuery', false);
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
